@@ -1,0 +1,8 @@
+<!-- object_listとはviewsのクラスにおける(ListViewにあたるもので作成されたデータベースのモデルの中にある項目のことを指す)-->
+<!--htmlの書き方と混合することもできる -->
+{% for item in object_list %}
+<ul>
+<li>{{ item.title }}</li>
+<li>{{ item.memo }}</li>
+</ul>>
+{% endfor %}

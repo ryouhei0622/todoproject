@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- actionはボタンを押した時にどこに遷移するのか. 空欄なら同じページ -->
+<!-- method: POSTはフォームのようにデータを送る時に用いる GETはwebから訪れる際に用いられる -->
+<form action="" method="POST" > {% csrf_token %}
+
+<input type="submit" value="delete">
+</form>
+{% endblock content %}

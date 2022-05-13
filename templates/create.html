@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- actionはボタンを押した時にどこに遷移するのか. 空欄なら同じページ -->
+<!-- method: POSTはフォームのようにデータを送る時に用いる GETはwebから訪れる際に用いられる -->
+<form action="" method="POST" > {% csrf_token %}
+<!-- formを用いることによってviews.pyで指定しているモデルをフォーム形式で扱う事ができる -->
+<!-- .as_pによってformの中身をhtmlにおけるpタグで囲んで表示させる事ができる(他にも.as_table, .as_ulなどがある) -->
+{{ form.as_p}}
+<input type="submit" value="create">
+</form>
+{% endblock content %}
